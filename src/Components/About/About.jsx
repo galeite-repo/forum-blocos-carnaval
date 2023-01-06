@@ -1,6 +1,6 @@
 import styles from './About.module.scss'
 import useSanityImage from 'src/hooks/useSanityImage'
-import Image from 'next/image';
+import Image from 'next/legacy/image'
 
 import Box from '../Ui/Box';
 
@@ -12,7 +12,7 @@ const About = ({ about }) => {
     const renderBiography = text.map(text => <p key={text._key}>{text.paragraph}</p>)
 
     return (
-        <section className={styles.about}>
+        <section className={styles.about} id="about">
             <div className={styles.image}>
                 <Image src={imageUrl(image).url()} layout='fill' />
                 <div className={styles.box}>

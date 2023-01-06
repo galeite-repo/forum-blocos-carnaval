@@ -2,9 +2,10 @@ import styles from './Header.module.scss'
 import { RiLinkedinFill, RiWhatsappFill } from 'react-icons/ri'
 import { AiFillInstagram, AiOutlineArrowDown } from 'react-icons/ai'
 import useSanityImage from 'src/hooks/useSanityImage'
-import Image from 'next/image';
-const Header = ({ header }) => {
+import Image from 'next/legacy/image'
+const Header = ({ header, social }) => {
     const { image, name, ocupation, summary } = header
+    const { linkedin, instagram, whatsapp } = social
 
     const imageUrl = useSanityImage();
 
@@ -13,12 +14,7 @@ const Header = ({ header }) => {
         <header className={styles['header-wrapper']} >
 
             <div className={styles.header}>
-                {/* SOCIAL BUTTONS */}
-                <div className={styles.social}>
-                    <a href="#"><RiLinkedinFill className={styles.icon} /></a>
-                    <a href="#"><AiFillInstagram className={styles.icon} /></a>
-                    <a href="#"><RiWhatsappFill className={styles.icon} /></a>
-                </div>
+
 
                 {/* HOME IMAGE */}
                 <div className={styles.image}>
@@ -30,6 +26,13 @@ const Header = ({ header }) => {
                     <span>{name}</span>
                     <h1>{ocupation}</h1>
                     <p>{summary}</p>
+                </div>
+
+                {/* SOCIAL BUTTONS */}
+                <div className={styles.social}>
+                    <a href={linkedin}><RiLinkedinFill className={styles.icon} /></a>
+                    <a href={instagram}><AiFillInstagram className={styles.icon} /></a>
+                    <a href={whatsapp}><RiWhatsappFill className={styles.icon} /></a>
                 </div>
 
                 <a href="#" className={styles.arrow}>

@@ -10,7 +10,7 @@ const Skills = ({ skills }) => {
     const renderExperiences = experience.map(experience => <Experience key={experience._key} experience={experience} />)
     return (
         <div className={styles['section-wrapper']}>
-            <section className={styles.section}>
+            <section className={styles.section} id='skills'>
                 <div className={styles.skills}>
                     <div className={styles.heading}>
                         <h2>{title}</h2>
