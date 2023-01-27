@@ -17,13 +17,13 @@ const Navbar = () => {
         <section className={styles['navbar-wrapper']}>
             <div className={styles.navbar}>
                 <a href="/" className={styles.logo}>
-                    <Image src='/logo.png' layout='fixed' width={42} height={27} />
+                    <Image src='/fbr.png' layout='fixed' width={45} height={45} />
                 </a>
                 <nav>
                     <ul className={styles.list}>
-                        <NavLink text='Sobre Mim' url='#about' />
-                        <NavLink text='Experiências' url='#skills' />
-                        <NavLink text='Projeto' url='#projects' />
+                        <NavLink text='O Forum' url='#about' />
+                        <NavLink text='Pesquisas' url='#skills' />
+                        <NavLink text='Blocos' url='#projects' />
                         <NavLink text='Contato' url='#footer' />
                     </ul>
                 </nav>
@@ -34,9 +34,9 @@ const Navbar = () => {
                         <AiOutlineClose {...commonAttributes} />
                         <nav>
                             <ul className={styles['mobile-list']}>
-                                <NavLink text='Sobre Mim' url='#about' toggleMenu={() => setIsMenu(!isMenu)} />
-                                <NavLink text='Experiências' url='#skills' toggleMenu={() => setIsMenu(!isMenu)} />
-                                <NavLink text='Projeto' url='#projects' toggleMenu={() => setIsMenu(!isMenu)} />
+                                <NavLink text='O Forum' url='#about' toggleMenu={() => setIsMenu(!isMenu)} />
+                                <NavLink text='Pesquisas' url='#skills' toggleMenu={() => setIsMenu(!isMenu)} />
+                                <NavLink text='Blocos' url='#projects' toggleMenu={() => setIsMenu(!isMenu)} />
                                 <NavLink text='Contato' url='#footer' toggleMenu={() => setIsMenu(!isMenu)} />
                             </ul>
                         </nav>

@@ -12,7 +12,7 @@ const Project = ({ project }) => {
             <a href={url}>
                 <div className={styles.image}>
                     <AiFillGithub className={styles.icon} />
-                    <Image src={imageUrl(image).url()} layout='fill' alt='' />
+                    <Image src={imageUrl(image).url()} layout='fill' />
                 </div>
                 {renderTech}
                 <h3 className='h5'>{title}</h3>
