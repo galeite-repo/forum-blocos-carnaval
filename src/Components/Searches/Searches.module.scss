@@ -1,0 +1,254 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+
+
+/*  SEÇÃO PESQUISAS   */
+.searchesWrapper{
+    @include max-width;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    scroll-margin-top: 8rem;
+    width: 100%;
+    //background: url('../../../public/images/bg-pesquisas.png');
+    // background-size:contain;
+    // background-clip: content-box;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin: auto;
+    margin-bottom: $marginBottom;
+
+
+    
+
+
+}
+
+.searchesWrapper > h2 {
+    text-align: center;
+    margin-bottom: 2.5vh;
+    @include device(mobile) {
+        margin-bottom: 5vh;
+    }
+    
+}
+
+
+.searches{
+    margin: 0px;
+}
+
+
+/* PRIMEIRA PESQUISA   */
+
+.firstSearch{
+    background-color: #2db8c5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2vw;
+    margin: auto;
+    @include device(mobile){
+        width: 100%;
+    }
+
+    @media(min-width: 426px) and (max-width: 1023px){
+        width: 85%;
+        margin: auto;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1439px){
+        width: 80%;
+        margin: auto;
+    }
+
+    @media(min-width: 1440px){
+        width: 75%;
+        margin: auto;
+    }
+
+}
+
+.firstSearch > *{
+    margin-top:  2vh;
+    margin-bottom: 2vh;
+}
+
+.firstSearch > a{
+    transition: 0.15s 0.15s ease-in;
+    text-decoration: none;
+    border: 3px solid #e50052;
+    border-radius: 15px;
+    width: 40%;
+    padding: 1%;
+    text-align: center;
+    color: #e50052;
+    font-weight: 700;
+
+    @include device(mobile){
+        width: 40%;
+    }
+
+    @media(min-width: 426px) and (max-width: 1023px){
+        width: 30%;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1439px){
+        width: 45%;
+        font-size: 1.5vh;
+    }
+
+    @media(min-width: 1440px){
+        width: 40%;
+        font-size: 1.5vh;
+    }
+
+}
+
+.firstSearch > a:hover{
+    background-color: #e50052;
+    color: #2db8c5;
+    
+}
+
+
+.firstSearch h4{
+    color: #e50052;
+    text-align: start;
+    font-size: 2.5vw;
+    width: 65%;
+    
+    @include device(mobile){
+        font-size: 8vw;
+        width: 95%;
+    }
+
+    @media(min-width: 426px) and (max-width: 1023px){
+        font-size: 4.5vw;
+        width: 75%;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1439px){
+        font-size: 4vw;
+        width: 60%;
+    }
+
+    @media(min-width: 1440px){
+        font-size: 2vw;
+        width: 70%;
+    }
+
+}
+
+.firstSearch span{
+    color: white;
+    font-weight: 500;
+    
+
+}
+
+/* SEGUNDA PESQUISA   */
+
+.secondSearch{
+    background-color: #e50052;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    margin: auto;
+    @include device(mobile){
+        width: 100%;
+    }
+
+    @media(min-width: 426px) and (max-width: 1023px){
+        width: 85%;
+        margin: auto;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1439px){
+        width: 80%;
+        margin: auto;
+    }
+
+    @media(min-width: 1440px){
+        width: 75%;
+        margin: auto;
+    }
+}
+
+.secondSearch > *{
+    margin-top:  2vh;
+    margin-bottom: 2vh;
+}
+
+.secondSearch > a{
+    transition: 0.15s 0.15s ease-in;
+    text-decoration: none;
+    border: 3px solid #2db8c5;
+    border-radius: 15px;
+    width: 40%;
+    padding: 1%;
+    text-align: center;
+    color: #2db8c5;
+    font-weight: 700;
+    @include device(mobile){
+        width: 40%;
+    }
+
+    @media(min-width: 426px) and (max-width: 1023px){
+        width: 30%;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1439px){
+        width: 45%;
+        font-size: 1.5vh;
+    }
+
+    @media(min-width: 1440px){
+        width: 40%;
+        font-size: 1.5vh;
+    }
+}
+
+.secondSearch > a:hover{
+    background-color: #2db8c5;
+    color: #e50052;
+    
+}
+
+.secondSearch h4{
+    color: #2db8c5;
+    text-align: start;
+    width: 65%;
+    font-size: 2.5vw;
+
+    @include device(mobile){
+        font-size: 8vw;
+        width: 95%;
+    }
+
+    @media(min-width: 426px) and (max-width: 1023px){
+        font-size: 4.5vw;
+        width: 75%;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1439px){
+        font-size: 4vw;
+        width: 60%;
+    }
+
+    @media(min-width: 1440px){
+        font-size: 2vw;
+        width: 70%;
+    }
+
+}
+
+.secondSearch span{
+    color: white;
+    font-weight: 500;
+}
