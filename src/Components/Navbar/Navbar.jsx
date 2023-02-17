@@ -22,7 +22,7 @@ const Navbar = () => {
                 <nav>
                     <ul className={styles.list}>
                         <NavLink text='O Forum' url='#about' />
-                        <NavLink text='Pesquisas' url='#skills' />
+                        <NavLink text='Pesquisas' url='#searches' />
                         <NavLink text='Blocos' url='#projects' />
                         <NavLink text='Contato' url='#footer' />
                     </ul>
@@ -35,7 +35,7 @@ const Navbar = () => {
                         <nav>
                             <ul className={styles['mobile-list']}>
                                 <NavLink text='O Forum' url='#about' toggleMenu={() => setIsMenu(!isMenu)} />
-                                <NavLink text='Pesquisas' url='#skills' toggleMenu={() => setIsMenu(!isMenu)} />
+                                <NavLink text='Pesquisas' url='#searches' toggleMenu={() => setIsMenu(!isMenu)} />
                                 <NavLink text='Blocos' url='#projects' toggleMenu={() => setIsMenu(!isMenu)} />
                                 <NavLink text='Contato' url='#footer' toggleMenu={() => setIsMenu(!isMenu)} />
                             </ul>
