@@ -10,6 +10,7 @@ import projects from './projects'
 import contact from './contact'
 import footer from './footer'
 import social from './social'
+import searches from './searches'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -22,6 +23,7 @@ export default createSchema({
     social,
     about,
     skills,
+    searches,
     projects,
     contact,
     footer,
