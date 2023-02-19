@@ -21,11 +21,11 @@ const Header = ({ header, social }) => {
                 </div>
                 
                 {/* SOCIAL BUTTONS */}
-                <div className={styles.social}>
+                {/* <div className={styles.social}>
                     <a href={linkedin}><RiLinkedinFill className={styles.icon} /></a>
                     <a href={instagram}><AiFillInstagram className={styles.icon} /></a>
                     <a href={whatsapp}><RiWhatsappFill className={styles.icon} /></a>
-                </div>
+                </div> */}
 
                 {/* <a href="#about" className={styles.arrow}>
                     <AiOutlineArrowDown className={styles.icon} />

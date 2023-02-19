@@ -17,7 +17,7 @@ const Navbar = () => {
         <section className={styles['navbar-wrapper']}>
             <div className={styles.navbar}>
                 <a href="/" className={styles.logo}>
-                    <Image src='/fbr.png' layout='fixed' width={45} height={45} />
+                    <Image src='/logo.png' layout='fixed' width={100} height={45} />
                 </a>
                 <nav>
                     <ul className={styles.list}>
