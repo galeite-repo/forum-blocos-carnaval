@@ -5,8 +5,9 @@ import Projects from "src/Components/Projects/Projects";
 import Footer from "src/Components/Footer/Footer";
 import Navbar from "src/Components/Navbar/Navbar";
 import Searches from "src/Components/Searches/Searches";
+import SFooter from "src/Components/SFooter/SFooter"
 
-export default function Home({ header, about, skills, projects, footer, social, searches }) {
+export default function Home({ header, about, skills, projects, footer, social, searches, sponsor, implementation }) {
 
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home({ header, about, skills, projects, footer, social, 
         <Searches searches={searches} />
         <Projects projects={projects} />
         <Footer footer={footer} />
+        <SFooter sponsor={sponsor} footer={footer} implementation={implementation} />
       </main>
     </>
   )
@@ -29,7 +31,9 @@ export const getStaticProps = async () => {
   const skills = await client.fetch(`*[_type == "skills"][0]`);
   const projects = await client.fetch(`*[_type == "projects"][0]`);
   const footer = await client.fetch(`*[_type == "footer"][0]`);
-  const searches = await client.fetch(`*[_type == "searches"]`)
+  const searches = await client.fetch(`*[_type == "searches"]`);
+  const sponsor = await client.fetch(`*[_type == "sponsor"]`);
+  const implementation = await client.fetch(`*[_type == "implementation"]`)
 
 
   return {
@@ -40,7 +44,9 @@ export const getStaticProps = async () => {
       skills,
       projects,
       footer,
-      searches
+      searches,
+      sponsor,
+      implementation
     }
   }
 }

@@ -13,7 +13,7 @@ const Footer = ({ footer }) => {
 
     const [isDataSent, setIsDataSent] = useState(false);
     const [hasError, setHasError] = useState(false);
-    const { title, copy } = footer;
+    const { title} = footer;
 
 
     const {
@@ -104,8 +104,6 @@ const Footer = ({ footer }) => {
                         {hasError && <span className='error'> Oops! Alguma coisa deu errado...</span>}
                     </form>
                 ) : <h3 className='success'>Obrigado por entrar em contato.</h3>}
-
-                <span className={styles.copy}>{copy}</span>
             </div>
 
         </footer>

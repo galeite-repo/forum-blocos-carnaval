@@ -3,6 +3,7 @@ export default {
     title : 'Sponsor',
     type: 'document',
     fields: [
-        {name: 'sponsor', title:'Image',type:'image'}
+        {name: 'title',title:'Title',type: 'string'},
+        {name: 'image', title:'Image',type:'image'},
     ]
 }
