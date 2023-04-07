@@ -1,12 +1,21 @@
+import { useState } from 'react';
 import Project from './Project';
 import styles from './Projects.module.scss'
 
 
-const Projects = ({ projects }) => {
+const Projects = ({projects}) => {
     const { title, projects: projectList, button, url } = projects
+    const [showAll,setShowAll] = useState("false")
 
-
-    const renderProjects = projectList.map(project => <Project key={project._key} project={project} />)
+    const renderProjects = projectList.map((project,index) => {
+        if(showAll == "false"){
+            if(index <= 2){
+                return <Project key={project._key} project={project}/>
+            }
+        }else{
+            return <Project key={project._key} project={project}/>
+        }
+    })
 
     return (
         <section className={styles.projects} id='projects'>
@@ -14,7 +23,7 @@ const Projects = ({ projects }) => {
             <ul className={styles.list}>
                 {renderProjects}
             </ul>
-            <a href={url} className='btn btn-primary'>{button}</a>
+            <a className='btn btn-primary' onClick={()=>{showAll == "true" ? setShowAll("false") : setShowAll("true")}}>{showAll == "false" ? button : "Esconder blocos"}</a>
         </section>
     )
 }

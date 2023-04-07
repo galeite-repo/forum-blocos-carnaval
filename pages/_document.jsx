@@ -15,8 +15,6 @@ export default function Document() {
                     href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'
                     rel='stylesheet'
                 />
-                <title>Blocos de Rua M'Boi</title>
-                <meta name="description" content="Fórum dos Blocos de Rua de M'Boi Mirim | Zona Sul/SP." />
             </Head>
             <body>
                 <Main />

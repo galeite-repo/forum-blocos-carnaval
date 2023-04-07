@@ -3,6 +3,7 @@ export default {
     title: 'Projects',
     type: 'document',
     fields: [
+      {name:'idBloco', title: 'Id do Bloco (Ex: Nome do Bloco sem espaços e acentuação)',type:'string'},
       { name: 'title', title: 'Title', type: 'string' },
       {
         name: 'projects',

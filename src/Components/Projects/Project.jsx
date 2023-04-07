@@ -3,7 +3,7 @@ import Image from 'next/legacy/image'
 import useSanityImage from 'src/hooks/useSanityImage'
 import { AiFillGithub } from 'react-icons/ai';
 
-const Project = ({ project }) => {
+const Project = ({ project}) => {
     const { image, title, technologies, description, url } = project
     const imageUrl = useSanityImage();
     const renderTech = technologies.map(tech => <span key={tech._key}>{tech.technology}</span>)

@@ -1,9 +1,39 @@
 @import 'styles/variables.scss';
 @import 'styles/mixins.scss';
 
+@keyframes showingBloco{
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 0.25;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    75%{
+        opacity: 0.75;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 .project {
     cursor: pointer;
     transition: all 0.2s ease-in;
+    width: 30%;
+    animation: showingBloco 1.3s ease-in;
+
+    @media(max-width: 767px){
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
 
     &:hover {
         transform: translateY(-1rem);
@@ -56,6 +86,9 @@
         color: $darkPrimary;
         font-weight: 500;
         font-size: 1.4rem;
+        @media(min-width: 767px) and (max-width: 1023px){
+            font-size: 1rem;
+        }
         display: inline-block;
         margin-bottom: 1rem;
 
