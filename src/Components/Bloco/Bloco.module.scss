@@ -1,0 +1,128 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+
+.bPageWrapper{
+    height: 100vh;
+    height: 100%;
+    padding: 10vh;
+    display: grid;
+    column-gap: 5vh;
+    row-gap: 5vh;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    box-sizing: border-box;
+    margin-bottom: 10vh;
+
+    @media(max-width: 1023px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 15vh;
+    }
+
+
+    
+
+}
+
+.bPageWrapper p{
+    color: $primary;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.infoBasica{
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.blocoCarrousel{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: auto;
+}
+
+.blocoCarrousel img{
+    border-radius: 20px;
+}
+
+.infoBasica > p{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+
+    @media(max-width: 1023px) {
+        width: 100%;
+    }
+}
+
+.infoEnsaios{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5vh;
+    box-sizing: border-box;
+
+    @media(max-width: 1023px) {
+        width: 100%;
+    }
+}
+
+.infoEnsaios > div > p:first-child, .infoPessoas > div > p:first-child{
+    color: $background;
+    text-align: start;
+    margin: auto;
+}
+
+.infoEnsaios > div > p:nth-child(2){
+    color: $primary;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.infoBasica > *{
+    margin-bottom: 2vh;
+}
+
+.infoPessoas{
+    @media(max-width: 1023px) {
+        width: 100%;
+        margin-top: -8vh;
+    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.infoEnsaios div, .infoPessoas div{
+    margin-bottom: 5vh;
+}
+
+.itemUl{
+    list-style: none;
+    padding: 0.5vh;
+}
+
+.contatosBloco{
+    width: 100%;
+    margin: auto;
+    color: $primary;
+    font-weight: bold;
+    text-align: start;
+
+    @media(max-width: 1023px) {
+        width: 100%;
+       
+    }
+}
+
+.contatosBloco > ul{
+    list-style: none;
+}

@@ -28,6 +28,8 @@
     transition: all 0.2s ease-in;
     width: 30%;
     animation: showingBloco 1.3s ease-in;
+    box-sizing: border-box;
+    overflow:hidden;
 
     @media(max-width: 767px){
         flex-direction: column;
