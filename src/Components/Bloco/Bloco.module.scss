@@ -7,8 +7,8 @@
     height: 100%;
     padding: 10vh;
     display: grid;
-    column-gap: 5vh;
-    row-gap: 5vh;
+    column-gap: 2vh;
+    row-gap: 2vh;
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr;
@@ -38,9 +38,14 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    row-gap: 3vh;
     align-items: center;
 
+}
+
+.infoBasica > img {
+    border-radius: 50%;
 }
 
 .blocoCarrousel{
@@ -86,10 +91,6 @@
     font-size: 1em;
 }
 
-.infoBasica > *{
-    margin-bottom: 2vh;
-}
-
 .infoPessoas{
     @media(max-width: 1023px) {
         width: 100%;
@@ -125,4 +126,27 @@
 
 .contatosBloco > ul{
     list-style: none;
+}
+
+.socialLinks{
+    list-style: none;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.socialLinks li{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.socialLinks a{
+    text-decoration: none;
+    color: $background;
+    font-size: 1.4em;
+    transition: 0.2s 0.2s ease-in-out;
+}
+
+.socialLinks a:hover{
+    color: $primary;
 }

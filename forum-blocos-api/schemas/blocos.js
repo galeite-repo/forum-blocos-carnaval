@@ -126,6 +126,26 @@ export default {
                   {name:'emailBloco',title:'Email do Bloco',type:'string'},
                   {name:'telefoneBloco',title:'Telefone do Bloco',type:'string'}
                 ]
+              },
+              {
+                name:'socialBloco',title:'Redes Sociais',type: 'object',fields:[
+                  {
+                    name:'instagramBloco',title:'Instagram',type: 'string'
+                  },
+                  {
+                    name:'facebookBloco',title:'Facebook',type: 'string'
+                  },
+                  {
+                    name:'twitterBloco',title:'Twitter',type: 'string'
+                  },
+                  {
+                    name:'youtubeBloco',title:'Youtube',type: 'string'
+                  },
+                  {
+                    name:'siteBloco',title:'Site',type: 'string'
+                  }
+                ],
+                description: 'Coloque o links completos, ex: https://www.instagram.com/....  Se o https não for adicionado nos campos abaixo, apresentará erro.' 
               }
               
             ],
