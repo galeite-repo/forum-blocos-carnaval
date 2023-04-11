@@ -12,7 +12,7 @@ const About = ({ about }) => {
     const renderBiography = text.map(text => <p key={text._key}>{text.paragraph}</p>)
 
     return (
-        <section className={styles.about} id="about">
+        <section data-aos="zoom-in-up" className={styles.about} id="sobre">
             <div className={styles.image}>
                 <Image src={imageUrl(image).url()} layout='fill' />
                 <div className={styles.box}>

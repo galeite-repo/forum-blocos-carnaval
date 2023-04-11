@@ -91,36 +91,53 @@
             height: 100%;
         }
 
-        .imageCapa{
+
+
+        img {
+            margin-top: -10rem;
             width: 100%;
-            height: 100%;
-            position: relative;
-            top: 0%;
-            animation: showSlide 3s linear forwards;
-            padding: 0px;
+            height: auto;
 
             @include device(mobile) {
-                max-height: 30vh;
+                margin-top: 0rem;
+                // max-height: 30vh;
+                width: 100%;
+                // bottom: 40px;
+                // margin-bottom: -2rem;
+            }
+            @include device(tablet) {
+                margin-top: 0rem;
+                // max-height: 30vh;
                 width: 100%;
             }
-
-            @media(min-width: 426px) and (max-width: 1023px){
-                max-height: 40vh;
-                width: 100%;
-            }
-            
-            @media(min-width: 1024px) and (max-width: 1439px){
-
-                max-height: 70vh;
-                width: 100%;
-            }
-
-            @media(min-width: 1440px){
-                max-height: 100vh;
-                width: 100%;
-            }
-
         }
+        // .imageCapa{
+        //     width: 100%;
+        //     height: 100%;
+        //     position: relative;
+        //     top: 0%;
+        //     animation: showSlide 3s linear forwards;
+        //     padding: 0px;
+
+
+
+        //     @media(min-width: 426px) and (max-width: 1023px){
+        //         max-height: 40vh;
+        //         width: 100%;
+        //     }
+            
+        //     @media(min-width: 1024px) and (max-width: 1439px){
+
+        //         max-height: 70vh;
+        //         width: 100%;
+        //     }
+
+        //     @media(min-width: 1440px){
+        //         max-height: 100vh;
+        //         width: 100%;
+        //     }
+
+        // }
 
 
         .social {

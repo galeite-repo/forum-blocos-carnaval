@@ -3,7 +3,7 @@ import styles from './Searches.module.scss'
 
 const Searches = ({searches})=>{
     return(
-        <section className={styles.searchesWrapper} id="searches">
+        <section data-aos="zoom-in-up" className={styles.searchesWrapper} id="pesquisa">
             <h2>Pesquisas</h2>
             <div className={styles.searches}>
                 <div className={styles.firstSearch}>

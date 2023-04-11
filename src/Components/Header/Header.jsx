@@ -1,24 +1,33 @@
 import styles from './Header.module.scss'
 import { RiLinkedinFill, RiWhatsappFill } from 'react-icons/ri'
 import { AiFillInstagram, AiOutlineArrowDown } from 'react-icons/ai'
+import {Carousel} from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import useSanityImage from 'src/hooks/useSanityImage'
 import Image from 'next/legacy/image'
 
 const Header = ({ header, social }) => {
-    const { image, name, ocupation, summary } = header
+    const { backgroundImage, name, ocupation, summary } = header
     const { linkedin, instagram, whatsapp } = social
 
-    const imageUrl = useSanityImage();
-
+    const imgUrl = useSanityImage();
     return (
         <header className={styles['header-wrapper']} >
 
             <div className={styles.header}>
 
                 {/* HOME IMAGE */}
-                <div className={styles.imageCapa}>
-                    <img src={imageUrl(header[0].image).url()} alt="Capa Carnaval" className={styles.bgSlide} />
-                </div>
+
+                <Carousel  showThumbs={false} showArrows={false} showStatus={false} showIndicators={false} autoPlay dynamicHeight={false} infiniteLoop="true">
+                    {backgroundImage.map((element)=>{ 
+                        return(
+                            <img key={header._id} src={imgUrl(element).url()} alt="Background Image" />
+                        )
+                    })}
+                </Carousel>
+
+
                 
                 {/* SOCIAL BUTTONS */}
                 {/* <div className={styles.social}>

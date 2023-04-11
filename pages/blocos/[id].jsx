@@ -19,7 +19,7 @@ const BlocoPage = ({header,social,sponsor,footer,implementation,projects})=>{
       <>
         <Navbar />
         <main>
-          <Bloco project={project}/>
+          <Bloco project={project} key={project._key}/>
           <SFooter sponsor={sponsor} footer={footer} implementation={implementation} />
         </main>
       </>

@@ -16,7 +16,7 @@ const UnicoBloco = ({project}) =>{
                 <Carousel showThumbs={false} autoPlay dynamicHeight="true" infiniteLoop="true">
                     {project.slideFotos.map((element)=>{ 
                         return(
-                            <img src={imgUrl(element).url()} alt={`Logo do ${project.title}`} />
+                            <img key={project._id} src={imgUrl(element).url()} alt={`Logo do ${project.title}`} />
                         )
                     })}
                 </Carousel>
@@ -51,8 +51,11 @@ const UnicoBloco = ({project}) =>{
                 <div className={styles.contatosBloco}>
                     <p>&bull; CONTATOS:</p>
                     <ul>
-                        <li>{project.contatosBloco[0]}</li>
-                        <li>{project.contatosBloco[1]}</li>
+                    {project.contatosBloco.map((element)=>{
+                            return(
+                                <li><p>{element}</p></li>
+                            )
+                        })}
                     </ul>
                 </div>
             </div>
@@ -67,7 +70,9 @@ const UnicoBloco = ({project}) =>{
                         })}
                     </ul>
                 </div>
-                <div>
+
+                
+                {/* <div>
                     <p>&bull; BATERIA:</p>
                     <ul className={styles.itemUl}>
                         {project.bateriaBloco.map((element)=>{
@@ -76,7 +81,9 @@ const UnicoBloco = ({project}) =>{
                             )
                         })}
                     </ul>
-                </div>
+                </div> */}
+                
+                
                 <div>
                     <p>&bull; INTEGRANTES:</p>
                     <p>{project.integrantesBloco}</p>

@@ -3,9 +3,16 @@ export default {
     title: 'Header',
     type: 'document',
     fields: [
-        { name: 'image', title: 'Image', type: 'image' },
-        { name: 'name', title: 'Name', type: 'string' },
-        { name: 'ocupation', title: 'Ocupation', type: 'string' },
-        { name: 'summary', title: 'Summary', type: 'text' },
+        {
+            name: 'backgroundImage',
+            title: 'Wallpaper Image Background',
+            type: 'array',
+            of:[{
+              name: 'image',
+              title: 'Imagem do Slide',
+              type: 'image'
+            }],
+            validation: Rule => Rule.required().min(1)
+          }
     ]
 }

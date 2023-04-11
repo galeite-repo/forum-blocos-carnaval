@@ -21,10 +21,10 @@ const Navbar = () => {
                 </a>
                 <nav>
                     <ul className={styles.list}>
-                        <NavLink text='O Forum' url='/#about' />
-                        <NavLink text='Pesquisas' url='/#searches' />
-                        <NavLink text='Blocos' url='/#projects' />
-                        <NavLink text='Contato' url='/#footer' />
+                        <NavLink text='O Forum' url='/#sobre' />
+                        <NavLink text='Pesquisas' url='/#pesquisa' />
+                        <NavLink text='Blocos' url='/#blocos' />
+                        <NavLink text='Contato' url='/#contato' />
                     </ul>
                 </nav>
                 <div className={`${styles.mobile} ${isMenu ? styles.active : ''}`}>

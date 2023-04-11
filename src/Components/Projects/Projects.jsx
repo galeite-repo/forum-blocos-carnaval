@@ -18,7 +18,7 @@ const Projects = ({projects}) => {
     })
 
     return (
-        <section className={styles.projects} id='projects'>
+        <section data-aos="zoom-in-up" className={styles.projects} id='blocos'>
             <h2>{title}</h2>
             <ul className={styles.list}>
                 {renderProjects}

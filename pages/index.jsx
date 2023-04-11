@@ -1,3 +1,6 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import Header from "src/Components/Header/Header";
 import About from "src/Components/About/About";
 import client from "src/sanity";
@@ -9,6 +12,11 @@ import SFooter from "src/Components/SFooter/SFooter"
 
 export default function Home({ header, about, skills, projects, footer, social, searches, sponsor, implementation }) {
 
+  useEffect(() => {
+
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -16,7 +24,7 @@ export default function Home({ header, about, skills, projects, footer, social, 
       <main>
         <About about={about} />
         <Searches searches={searches} />
-        <Projects projects={projects} />
+        <Projects  projects={projects} />
         <Footer footer={footer} />
         <SFooter sponsor={sponsor} footer={footer} implementation={implementation} />
       </main>
@@ -24,8 +32,8 @@ export default function Home({ header, about, skills, projects, footer, social, 
   )
 }
 
-export const getStaticProps = async () => {
-  const header = await client.fetch(`*[_type == "header"]`);
+export const getServerSideProps  = async () => {
+  const header = await client.fetch(`*[_type == "header"][0]`);
   const social = await client.fetch(`*[_type == "social"][0]`);
   const about = await client.fetch(`*[_type == "about"][0]`);
   const skills = await client.fetch(`*[_type == "skills"][0]`);
