@@ -66,7 +66,7 @@ const Footer = ({ footer }) => {
 
     }
     return (
-        <footer data-aos="zoom-in-up" className={styles['footer-wrapper']} id='contato'>
+        <footer data-aos="fade-up" data-aos-anchor-placement="top-bottom" className={styles['footer-wrapper']} id='contato'>
             <div className={styles.footer}>
                 <div className={styles.box}>
                     <Box text='contato' />

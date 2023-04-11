@@ -11,7 +11,7 @@
     .navbar {
         @include max-width;
         @include flex-center;
-        padding: 2.3rem 2rem;
+        padding: 2rem 2rem;
 
         @include device(tablet) {
             justify-content: space-between;
@@ -19,7 +19,7 @@
 
         .logo {
             position: absolute;
-            top: 1rem;
+            top: .5rem;
             left: 2rem;
 
             @include device(tablet) {

@@ -6,7 +6,7 @@
     display: inline-block;
 
     &:not(:last-of-type) {
-        margin-right: 2rem;
+        margin-right: 2.5rem;
     }
 
     a {
@@ -17,6 +17,7 @@
 
         &:hover {
             font-weight: 600;
+            color: $white;
         }
     }
 }

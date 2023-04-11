@@ -15,10 +15,10 @@ const SFooter = ({sponsor,implementation,footer})=>{
                 <div className={styles.footerNav}>
                     <nav>
                         <ul>
-                            <li><a href='#about'>Forum</a></li>
-                            <li><a href='#searches'>Pesquisas</a></li>
-                            <li><a href='#projects'>Blocos</a></li>
-                            <li><a href='#footer'>Contato</a></li>
+                            <li><a href='#sobre'>Forum</a></li>
+                            <li><a href='#pesquisa'>Pesquisas</a></li>
+                            <li><a href='#blocos'>Blocos</a></li>
+                            <li><a href='#contato'>Contato</a></li>
                         </ul>
                     </nav>
                 </div>
