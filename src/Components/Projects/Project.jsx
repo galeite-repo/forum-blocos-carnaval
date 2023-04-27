@@ -9,7 +9,7 @@ const Project = ({ project}) => {
     const renderTech = technologies.map(tech => <span key={tech._key}>{tech.technology}</span>)
     return (
         <li className={styles.project}>
-            <a href={`blocos/${project.idBloco}`}>
+            <a href={`blocos/${project.slug.current}`}>
                 <div className={styles.image}>
                     {/* <AiFillGithub className={styles.icon} /> */}
                     <div className={styles.icon}>

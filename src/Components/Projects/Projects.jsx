@@ -4,26 +4,27 @@ import styles from './Projects.module.scss'
 
 
 const Projects = ({projects}) => {
-    const { title, projects: projectList, button, url } = projects
+
+    // const { projects: projectList, button, url } = projects
     const [showAll,setShowAll] = useState("false")
 
-    const renderProjects = projectList.map((project,index) => {
+    const renderProjects = projects.map((project,index) => {
         if(showAll == "false"){
             if(index <= 2){
-                return <Project key={project._key} project={project}/>
+                return <Project key={project._id} project={project}/>
             }
         }else{
-            return <Project key={project._key} project={project}/>
+            return <Project key={project._id} project={project}/>
         }
     })
 
     return (
         <section data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" className={styles.projects} id='blocos'>
-            <h2>{title}</h2>
+            <h2>Blocos de Carnaval M'boi Mirim</h2>
             <ul className={styles.list}>
                 {renderProjects}
             </ul>
-            <a className='btn btn-primary' onClick={()=>{showAll == "true" ? setShowAll("false") : setShowAll("true")}}>{showAll == "false" ? button : "Esconder blocos"}</a>
+            <a className='btn btn-primary' onClick={()=>{showAll == "true" ? setShowAll("false") : setShowAll("true")}}>{showAll == "false" ? "Veja todos os Blocos" : "Esconder blocos"}</a>
         </section>
     )
 }

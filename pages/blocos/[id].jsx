@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 const BlocoPage = ({header,social,sponsor,footer,implementation,projects})=>{
   const id = useRouter().query.id
   let project = ""
-  projects.projects.map(element => {
-    if(element.idBloco == id){
+  projects.map(element => {
+    if(element.slug.current == id){
       project = element;
       return
     }
@@ -30,7 +30,7 @@ const BlocoPage = ({header,social,sponsor,footer,implementation,projects})=>{
 export default BlocoPage; 
 
 export const getServerSideProps = async () => {
-    const projects = await client.fetch(`*[_type == "projects"][0]`);
+    const projects = await client.fetch(`*[_type == "projects"]`);
     const footer = await client.fetch(`*[_type == "footer"][0]`);
     const sponsor = await client.fetch(`*[_type == "sponsor"]`);
     const implementation = await client.fetch(`*[_type == "implementation"]`)

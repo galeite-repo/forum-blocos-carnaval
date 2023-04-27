@@ -37,7 +37,7 @@ export const getServerSideProps  = async () => {
   const social = await client.fetch(`*[_type == "social"][0]`);
   const about = await client.fetch(`*[_type == "about"][0]`);
   const skills = await client.fetch(`*[_type == "skills"][0]`);
-  const projects = await client.fetch(`*[_type == "projects"][0]`);
+  const projects = await client.fetch(`*[_type == "projects"]`);
   const footer = await client.fetch(`*[_type == "footer"][0]`);
   const searches = await client.fetch(`*[_type == "searches"]`);
   const sponsor = await client.fetch(`*[_type == "sponsor"]`);
