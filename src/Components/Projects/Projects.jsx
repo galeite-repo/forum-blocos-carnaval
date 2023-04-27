@@ -9,13 +9,8 @@ const Projects = ({projects}) => {
     const [showAll,setShowAll] = useState("false")
 
     const renderProjects = projects.map((project,index) => {
-        if(showAll == "false"){
-            if(index <= 2){
-                return <Project key={project._id} project={project}/>
-            }
-        }else{
             return <Project key={project._id} project={project}/>
-        }
+        
     })
 
     return (
@@ -24,7 +19,7 @@ const Projects = ({projects}) => {
             <ul className={styles.list}>
                 {renderProjects}
             </ul>
-            <a className='btn btn-primary' onClick={()=>{showAll == "true" ? setShowAll("false") : setShowAll("true")}}>{showAll == "false" ? "Veja todos os Blocos" : "Esconder blocos"}</a>
+            {/* <a className='btn btn-primary' onClick={()=>{showAll == "true" ? setShowAll("false") : setShowAll("true")}}>{showAll == "false" ? "Veja todos os Blocos" : "Esconder blocos"}</a> */}
         </section>
     )
 }
