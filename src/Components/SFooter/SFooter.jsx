@@ -27,7 +27,7 @@ const SFooter = ({sponsor,implementation,footer})=>{
                     <p>Apoio:</p>
                     <div className={styles.sponsorsImages}>
                         <img src={imageUrl(sponsor[0].image).url()} style={{width: "100%"}}/>
-                        <img src={imageUrl(sponsor[1].image).url()} style={{width: "100%"}}/>
+                        <img src={imageUrl(sponsor[1].image).url()} style={{width: "80%"}}/>
                     </div>
                 </div>
 
