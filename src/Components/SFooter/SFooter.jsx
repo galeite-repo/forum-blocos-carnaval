@@ -9,7 +9,7 @@ const SFooter = ({sponsor,implementation,footer})=>{
         <section className={styles.sfooterWrapper}>
             <div className={styles.sfooter}>
                 <div className={styles.footerLogo}>
-                    <a href="#"><img src={imageUrl(sponsor[1].image).url()}/></a>
+                    <a href="#"><img src={imageUrl(sponsor[2].image).url()}/></a>
                 </div>
 
                 <div className={styles.footerNav}>
@@ -27,6 +27,7 @@ const SFooter = ({sponsor,implementation,footer})=>{
                     <p>Apoio:</p>
                     <div className={styles.sponsorsImages}>
                         <img src={imageUrl(sponsor[0].image).url()} style={{width: "100%"}}/>
+                        <img src={imageUrl(sponsor[1].image).url()} style={{width: "100%"}}/>
                     </div>
                 </div>
 
