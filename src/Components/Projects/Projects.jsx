@@ -7,9 +7,8 @@ const Projects = ({projects}) => {
 
     // const { projects: projectList, button, url } = projects
     const [showAll,setShowAll] = useState("false")
-
     const renderProjects = projects.map((project,index) => {
-            return <Project key={project._id} project={project}/>
+        return <Project key={project._id} project={project}/>
         
     })
 

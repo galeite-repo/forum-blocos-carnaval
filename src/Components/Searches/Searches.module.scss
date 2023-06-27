@@ -185,7 +185,16 @@
     margin-bottom: 2vh;
 }
 
-.secondSearch > a{
+// Div temporária 
+.tempButtons{
+    display: flex;
+    column-gap: 2vh;
+}
+
+
+// 
+
+.secondSearch > div a{
     transition: 0.15s 0.15s ease-in;
     text-decoration: none;
     border: 3px solid #2db8c5;
@@ -214,7 +223,7 @@
     }
 }
 
-.secondSearch > a:hover{
+.secondSearch > div a:hover{
     background-color: #2db8c5;
     color: #e50052;
     

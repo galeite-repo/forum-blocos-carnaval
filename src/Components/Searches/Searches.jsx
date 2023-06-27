@@ -9,12 +9,14 @@ const Searches = ({searches})=>{
                 <div className={styles.firstSearch}>
                     <h4>{searches[0].title}</h4>
                     <span>{searches[0].date}</span>
-                    <a href={searches[0].url}>{searches[0].button}</a>
                 </div>
                 <div className={styles.secondSearch}>
                     <h4>{searches[1].title}</h4>
                     <span>{searches[1].date}</span>
-                    <a href={searches[1].url}>{searches[1].button}</a>
+                    <div className={styles.tempButtons}>
+                        <a href="/images/pesquisasResumo.pdf" download>Veja o Resumo da Pesquisa</a>
+                        <a href="/images/pesquisasCompleta.pdf" download>Veja a Pesquisa Completa</a>
+                    </div>
                 </div>
             </div>
         </section>
