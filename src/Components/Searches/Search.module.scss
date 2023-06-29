@@ -1,0 +1,200 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+/*  PÁGINA DA PESQUISA   */
+.searchWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    padding-top: 10vh;
+    padding-right: 5vh;
+    padding-left: 5vh;
+    padding-bottom: 5vh;
+    min-height: 100vh;
+    background-color: #C1DFDF;
+
+}
+
+.sectionWrapper{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 10vh;
+    
+}
+
+// Estilos Comuns às Sessões
+
+.sectionWrapper > .sectionSideBar{
+    border: 2px solid white;
+    padding: 2vh;
+    border-radius: 10px;
+    width: 20%;
+}
+
+.sectionWrapper > .sectionSideBar > span{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.sectionWrapper > .sectionSideBar > p{
+    text-align: justify;
+    font-size: 1.4rem;
+    margin-top: 2vh;
+    color: #783517;
+}
+
+.sectionWrapper > .sectionContent {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(30%,1fr));
+    column-gap: 2vh;
+    row-gap: 2vh;
+
+}
+
+.sectionWrapper > .sectionContent > .littleBlockWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-radius: 30px;
+    border: 2px solid white;
+    padding: 1.4vh;
+    box-sizing: border-box;
+}
+
+.sectionWrapper > .sectionContent > .littleBlockWrapper> span:first-child{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.sectionWrapper > .sectionContent > .littleBlockWrapper > span:nth-child(2){
+    font-size: 5vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sectionWrapper > .sectionContent > .littleBlockWrapper > span:nth-child(3){
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.sectionWrapper > .sectionContent > .littleBlockWrapper> span{
+    display: block;
+}
+
+// Primeira Sessão
+
+.sectionWrapper.firstSection > .sectionContent > .littleBlockWrapper{
+    background-color: #D75609;
+}
+
+.sectionWrapper.firstSection > .sectionSideBar > span{
+    color: #D75609;
+}
+
+// Segunda Sessão 
+
+.sectionWrapper.secondSection > .sectionContent > .littleBlockWrapper{
+    background-color: #6D597A;
+}
+
+.sectionWrapper.secondSection > .sectionSideBar > span{
+    color: #6D597A;
+}
+
+// Terceira Sessão
+
+.sectionWrapper.thirdSection > .sectionContent > .littleBlockWrapper{
+    background-color: #0293A7;
+}
+
+.sectionWrapper.thirdSection > .sectionSideBar > span{
+    color: #0293A7;
+}
+
+
+// Quarta Sessão 
+
+.sectionWrapper.fourthSection > .sectionContent > .littleBlockWrapper{
+    background-color: #783517;
+}
+
+.sectionWrapper.fourthSection > .sectionSideBar > span{
+    color: #783517;
+}
+
+
+
+// Telas 
+
+@media(max-width:767px){
+
+    .searchWrapper{
+        padding-top: 15vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
+
+    .sectionWrapper{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        row-gap: 8vh;
+        margin-bottom: 5vh;
+    }
+
+    .sectionWrapper > .sectionSideBar{
+        border: 2px solid white;
+        padding: 2vh;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .sectionWrapper > .sectionContent {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+
+
+}
+
+@media(min-width:768px) and (max-width:1400px){
+
+    .searchWrapper{
+        padding-top: 15vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
+
+    .sectionWrapper{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        row-gap: 8vh;
+        margin-bottom: 5vh;
+    }
+
+    .sectionWrapper > .sectionSideBar{
+        border: 2px solid white;
+        padding: 2vh;
+        border-radius: 10px;
+        width: 80%;
+    }
+
+    .sectionWrapper > .sectionContent {
+        display: grid;
+    
+    }
+
+}

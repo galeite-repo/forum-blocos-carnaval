@@ -14,7 +14,7 @@ const Searches = ({searches})=>{
                     <h4>{searches[1].title}</h4>
                     <span>{searches[1].date}</span>
                     <div className={styles.tempButtons}>
-                        <a href="/images/pesquisasResumo.pdf" download>Veja o Resumo da Pesquisa</a>
+                        <a href={`pesquisa/${searches[0].slug.current}`}>Veja o Resumo da Pesquisa</a>
                         <a href="/images/pesquisasCompleta.pdf" download>Veja a Pesquisa Completa</a>
                     </div>
                 </div>
