@@ -193,8 +193,34 @@
     }
 
     .sectionWrapper > .sectionContent {
-        display: grid;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
     
     }
 
+    .sectionWrapper > .sectionContent > .littleBlockWrapper > span:nth-child(2){
+        font-size: 7vw;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+}
+
+@media(max-width:767px){
+    .sectionWrapper > .sectionContent > .littleBlockWrapper > span:nth-child(2){
+        font-size: 10vw;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+@media(min-width:1440px){
+    
+    .sectionWrapper > .sectionContent > .littleBlockWrapper > span:nth-child(2){
+        font-size: 4vw;
+        font-weight: bold;
+        text-align: center;
+    }
+    
 }
